@@ -1,0 +1,29 @@
+﻿@using AspNet.Mvc.Models
+@model List<Book>
+
+<div class="container pt-4">
+    <h1 class="text-2xl font-bold mb-4">Popis Knjiga</h1>
+
+    <table class="border-collapse w-full border border-slate-400 bg-white text-sm shadow-sm">
+        <thead class="bg-slate-50 dark:bg-slate-700">
+            <tr>
+                <th class="border border-slate-300 font-semibold p-4 text-slate-900 text-left">Naslov</th>
+                <th class="border border-slate-300 font-semibold p-4 text-slate-900 text-left">Autor(i)</th>
+                <th class="border border-slate-300 font-semibold p-4 text-slate-900 text-left">Godina</th>
+                <th class="border border-slate-300 font-semibold p-4 text-slate-900 text-left">ISBN</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td class="border border-slate-300 p-4 text-slate-500">@book.Title</td>
+                <td class="border border-slate-300 p-4 text-slate-500">@book.Author</td>
+                <td class="border border-slate-300 p-4 text-slate-500">@book.ReleaseYear</td>
+                <td class="border border-slate-300 p-4 text-slate-500">@book.ISBN</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
