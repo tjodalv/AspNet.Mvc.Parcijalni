@@ -11,6 +11,8 @@ namespace AspNet.Mvc.Controllers
 
             List<Book> books = booksDB.getBooks();
 
+            ViewBag.Title = "Popis knjiga";
+
             return View("~/Views/Exam.cshtml", books);
         }
     }
